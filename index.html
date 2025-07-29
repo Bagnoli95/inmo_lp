@@ -14,6 +14,9 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <base href="/inmo_lp/">
 
   <meta charset="UTF-8">
@@ -28,6 +31,14 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!-- Configuración adicional para CORS -->
+  <script>
+    // Configurar para desarrollo
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log('Development mode detected');
+    }
+  </script>
 
   <title>gestor_app_front</title>
   <link rel="manifest" href="manifest.json">
